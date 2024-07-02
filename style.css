@@ -99,11 +99,12 @@ footer {
   color: var(--primary-color);
 }
 
-@media (max-width: 600px) {
-  /* body {
+@media (max-width: 640px) {
+  body {
     display: flex;
     justify-content: center;
-  } */
+    align-items: center;
+  }
 
   [data-testid="container"] {
     width: 70%;

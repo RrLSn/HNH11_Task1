@@ -12,6 +12,11 @@
 body {
   width: 100vw;
   height: 100vh;
+}
+
+main {
+  width: 100%;
+  height: 100%;
   background-color: blanchedalmond;
   display: flex;
   justify-content: center;
@@ -20,14 +25,14 @@ body {
 
 [data-testid="container"] {
   width: 70%;
-  height: 35rem;
+  height: max-content;
   background-color: aliceblue;
   border: 2px solid var(--primary-color);
   display: flex;
   justify-content: space-between;
 }
 
-[data-testid="wrapper"] {
+[data-testid="Infowrapper"] {
   width: 37%;
   height: 100%;
   background-color: var(--primary-color);
@@ -40,9 +45,8 @@ body {
 }
 
 [data-testid="slackProfilePicture"] {
-  width: 15rem;
+  max-width: 100%;
   height: 15rem;
-  border-radius: 50%;
 }
 
 [data-testid="slackDisplayName"],
@@ -98,4 +102,23 @@ footer {
 [data-testid="scrapeanyWebLink"]:hover {
   text-decoration: underline;
   color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  [data-testid="container"] {
+    width: 70%;
+    display: block;
+  }
+  [data-testid="Infowrapper"] {
+    height: 27rem;
+    width: 100%;
+  }
+  [data-testid="cardInfo"] {
+    width: 100%;
+  }
 }
